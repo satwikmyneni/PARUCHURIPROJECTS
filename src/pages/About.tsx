@@ -7,6 +7,13 @@ import { Award, Target, Eye, Users, Shield, Clock, CheckCircle2, ArrowRight } fr
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import heroImage from "@/assets/hero-electrical.jpg";
+import bhelLogo from "@/assets/clients/bhel.png";
+import toshibaLogo from "@/assets/clients/toshiba.png";
+import technoLogo from "@/assets/clients/techno-electric.png";
+import telkLogo from "@/assets/clients/telk.png";
+import kanoharLogo from "@/assets/clients/kanohar.png";
+import nhptlLogo from "@/assets/clients/nhptl.png";
+
 
 const About = () => {
   return (
@@ -272,36 +279,44 @@ const About = () => {
       </section>
 
       {/* Esteemed Clients */}
-      <section className="section-padding bg-muted/50">
-        <div className="section-container">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">
-              Our Clients
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Esteemed Customers
-            </h2>
-            <p className="text-muted-foreground">
-              Trusted by India's leading power and electrical infrastructure companies.
-            </p>
-          </div>
+     <section className="section-padding bg-muted/50">
+  <div className="section-container">
+    <div className="text-center max-w-2xl mx-auto mb-12">
+      <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-2 block">
+        Our Clients
+      </span>
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+        Esteemed Customers
+      </h2>
+      <p className="text-muted-foreground">
+        Trusted by India's leading power and electrical infrastructure companies.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              "BHEL",
-              "Toshiba",
-              "Techno Electric",
-              "TELK",
-              "Kanohar",
-              "NHPTL",
-            ].map((client) => (
-              <div key={client} className="bg-card rounded-xl p-6 shadow-md border border-border/50 flex items-center justify-center">
-                <span className="font-display font-bold text-foreground text-center">{client}</span>
-              </div>
-            ))}
-          </div>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+      {[
+        { name: "BHEL", logo: bhelLogo },
+        { name: "Toshiba", logo: toshibaLogo },
+        { name: "Techno Electric", logo: technoLogo },
+        { name: "TELK", logo: telkLogo },
+        { name: "Kanohar", logo: kanoharLogo },
+        { name: "NHPTL", logo: nhptlLogo },
+      ].map((client) => (
+        <div
+          key={client.name}
+          className="bg-card rounded-xl p-6 shadow-md border border-border/50 flex items-center justify-center hover:shadow-lg transition"
+        >
+          <img
+            src={client.logo}
+            alt={client.name}
+            className="max-h-12 object-contain opacity-80 hover:opacity-100 transition"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       <Footer />
       <WhatsAppButton />
