@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Zap, MapPin, Phone, Mail, Clock, Facebook, Linkedin, Twitter } from "lucide-react";
 
+
+
 export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -10,8 +12,11 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <Zap className="w-6 h-6 text-accent-foreground" />
+              <div className="w-10 h-10 flex items-center justify-center">
+                 <img
+                  src="/favicon.png"
+                  alt="Paruchuri Projects Logo"
+                  className="h-10 w-auto object-contain"/>
               </div>
               <div>
                 <span className="font-display font-bold text-xl text-primary-foreground">
